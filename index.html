@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>PC</title>
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="pc"></div>
+    <div class="monitor"></div>
+    <div class="blackCover"></div>
+    <div class="loadingPage">
+      <img
+        src="./pcSystemBewerbung/winIcon-transformed.png"
+        alt="Loading"
+        class="loadingPageIcon"
+      />
+      <div class="loadingCircle"></div>
+    </div>
+    <div class="squareContainer">
+      <div id="square" class="squareRed"></div>
+    </div>
+    <div class="buttonStart" id="colorToggleButton">
+      <img src="./pcSystemBewerbung/icons/power-button.png" alt="Power" />
+    </div>
+    <!-- Desktop and icons -->
+    <div class="desktop">
+      <div class="desktopIcons">
+        <div class="icon" data-pdf="./pcSystemBewerbung/files/lebenslauf.pdf">
+          <img src="./pcSystemBewerbung/icons/cv.png" alt="Icon 1" />
+          <p>Lebenslauf</p>
+        </div>
+        <div class="icon" data-pdf="path/to/motivation.pdf">
+          <img src="./pcSystemBewerbung/icons/motivation.png" alt="Icon 2" />
+          <p>Motivationsschreiben</p>
+        </div>
+        <div class="icon" data-pdf="./pcSystemBewerbung/files/einschreiben.pdf">
+          <img src="./pcSystemBewerbung/icons/einschreiben.png" alt="Icon 3" />
+          <p>Einschreiben</p>
+        </div>
+        <div class="icon" data-pdf="./pcSystemBewerbung/files/Zeugnisse.pdf">
+            <img src="./pcSystemBewerbung/icons/zeugnisse.png" alt="Icon 5" />
+            <p>Zeugnisse</p>
+          </div>
+        <div class="icon" data-pdf="./pcSystemBewerbung/files/AIT.pdf">
+          <img src="./pcSystemBewerbung/icons/zertifikat.png" alt="Icon 4" />
+          <p>Zertifikate</p>
+        </div>
+      </div>
+      <div id="tooltip" class="tooltip">
+        <!-- PDF attēlojums šeit -->
+        <iframe id="pdfViewer" style="width: 100%; height: 100%; border: none;"></iframe>
+      </div>
+      <div class="navi">
+        <img src="./pcSystemBewerbung/icons/naviPanel.jpg" alt="Navi" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

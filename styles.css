@@ -1,0 +1,216 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/pcSystemBewerbung/painted-concrete-background.jpg")
+    no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.pc {
+  position: absolute;
+  top: -30px;
+  left: -12%;
+  background: url("./pcSystemBewerbung/pcBlock.png") no-repeat center center;
+  width: 1350px;
+  height: 1350px;
+  background-size: contain;
+  z-index: 1;
+}
+
+.monitor {
+  position: absolute;
+  bottom: -88%;
+  left: 15%;
+  background: url("./pcSystemBewerbung/redMon.png") no-repeat center center;
+  width: 2500px;
+  height: 3500px;
+  background-size: contain;
+  z-index: 2;
+}
+
+.blackCover {
+  position: absolute;
+  top: 24px;
+  left: 783px;
+  width: 1720px;
+  height: 852px;
+  border-radius: 10px;
+  background-color: black;
+  display: block; /* Initially visible */
+  clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 100%, 0 100%);
+  z-index: 5;
+}
+
+.loadingPage {
+  position: absolute;
+  top: 40%;
+  left: 64%;
+  transform: translate(-50%, -50%);
+  display: none; /* Initially hidden */
+  text-align: center;
+  z-index: 10;
+}
+
+.loadingPageIcon {
+  width: 180px; /* Adjust the size of the loading image as needed */
+}
+
+.loadingCircle {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3); /* Light white border */
+  border-top: 5px solid #fff; /* White border for the spinning effect */
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+  opacity: 0.6;
+  margin: 10px auto; /* Centers the loading circle */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.squareRed,
+.squareBlue {
+  position: absolute;
+  top: 93%;
+  left: 475px;
+  width: 10px;
+  height: 30px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.squareRed {
+  background-color: red;
+  filter: drop-shadow(0px 0px 8px red);
+}
+
+.squareBlue {
+  background-color: rgb(22, 74, 245);
+  filter: drop-shadow(0px 0px 8px rgb(11, 85, 245));
+  display: none; /* Initially not visible */
+}
+
+.buttonStart img {
+  position: absolute;
+  top: 1158px;
+  left: 345px;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.buttonStart img:hover {
+  transform: scale(1.1);
+}
+
+.navi {
+  position: absolute;
+  top: 840px;
+  right: 14px;
+  padding: 5px; /* Samazināta iekšējā atstarpe */
+  width: 1800px; /* Samazināts panelis platums */
+  text-align: center; /* Centra izkārtojums attēlam un tekstam */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Pievienots ēnojums, ja nepieciešams */
+}
+
+.navi img {
+  max-width: 1717px; /* Nodrošina, ka attēls nepārsniedz paneli */
+  height: auto; /* Uztur attēla proporcijas */
+  border-radius: 0 0 5px 5px;
+}
+
+.navi p {
+  font-size: 12px; /* Samazināts fonta izmērs, lai ietilptu šaurākā panelī */
+  margin: 0; /* Noņemts margin, ja nepieciešams */
+}
+
+.desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none; /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+  z-index: 5; /* Ensure it's above other elements */
+}
+
+.desktopIcons {
+  display: flex; /* Ensures icons are laid out in a row */
+  flex-wrap: wrap; /* Allows icons to wrap to the next line if needed */
+  justify-content: center; /* Centers icons horizontally */
+  flex-direction: column;
+  margin-bottom: 500px;
+  margin-right: 830px;
+  align-items: center; /* Centers icons vertically */
+  width: 100%; /* Makes the container take full width */
+  height: 100%; /* Makes the container take full height */
+  padding: 20px; /* Adds padding around the icons */
+  box-sizing: border-box; /* Ensures padding is included in the width/height */
+  filter: drop-shadow(
+    0px 0px 12px blue
+  ); /* Adds a drop shadow to the icon container */
+}
+
+.icon {
+  width: 120px; /* Increased size for better visibility */
+  height: 120px; /* Increased size for better visibility */
+  margin: 15px; /* Increased space between icons */
+  display: flex; /* Makes the icon a flex container */
+  flex-direction: column; /* Aligns items in a column */
+  align-items: center; /* Centers items horizontally */
+  justify-content: center; /* Centers items vertically */
+  text-align: center; /* Centers text under the icon */
+}
+
+.icon img {
+  width: 60px; /* Increased size of the icon image */
+  height: 60px; /* Increased size of the icon image */
+}
+
+.icon p {
+  margin: 5px 0 0;
+  color: white;
+  font-size: 14px; /* Increased font size for better readability */
+}
+
+.tooltip {
+    position: absolute;
+    margin-top: -260px; /* Pielāgojiet pēc vajadzības */
+    margin-left: 405px; /* Pielāgojiet pēc vajadzības */
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 700px;
+    height: 760px;
+    display: none; /* Initially hidden */
+    z-index: 20;
+  }
+  
